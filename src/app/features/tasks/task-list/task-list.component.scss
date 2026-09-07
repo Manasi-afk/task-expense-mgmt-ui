@@ -1,0 +1,44 @@
+.filter-field {
+  width: 200px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.task-title {
+  font-weight: 500;
+}
+
+.task-description {
+  font-size: 12px;
+  color: #5b6770;
+  max-width: 420px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.actions-cell {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.actions-cell button {
+  transition: color 0.15s ease;
+}
+
+::ng-deep .status-todo {
+  background: #e4e9eb !important;
+  color: #3a4650 !important;
+}
+
+::ng-deep .status-progress {
+  background: #fde3c8 !important;
+  color: #8a4a05 !important;
+}
+
+::ng-deep .status-done {
+  background: #d9f2e6 !important;
+  color: #106647 !important;
+}

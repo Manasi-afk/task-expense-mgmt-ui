@@ -1,0 +1,41 @@
+<div class="auth-shell">
+  <mat-card class="auth-card">
+    <mat-card-header>
+      <mat-card-title>Welcome back</mat-card-title>
+      <mat-card-subtitle>Log in to see your tasks and expenses</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="submit()" class="auth-form">
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="username" autocomplete="username" />
+          @if (form.controls.username.touched && form.controls.username.invalid) {
+            <mat-error>Username is required</mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" autocomplete="current-password" />
+          @if (form.controls.password.touched && form.controls.password.invalid) {
+            <mat-error>Password is required</mat-error>
+          }
+        </mat-form-field>
+
+        <button mat-flat-button color="primary" type="submit" class="auth-submit" [disabled]="submitting()">
+          @if (submitting()) {
+            <mat-spinner diameter="20"></mat-spinner>
+          } @else {
+            Log in
+          }
+        </button>
+      </form>
+    </mat-card-content>
+
+    <mat-card-footer class="auth-footer">
+      <span>New here?</span>
+      <a routerLink="/register">Create an account</a>
+    </mat-card-footer>
+  </mat-card>
+</div>

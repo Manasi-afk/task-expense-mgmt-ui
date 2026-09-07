@@ -1,0 +1,132 @@
+@use '@angular/material' as mat;
+
+html {
+  @include mat.theme((
+    color: (
+      theme-type: light,
+      primary: mat.$cyan-palette,
+      tertiary: mat.$orange-palette,
+    ),
+    typography: 'Inter',
+    density: -1,
+  ));
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  background: #f6f8f9;
+  color: #1b1f22;
+}
+
+a {
+  color: #00707d;
+}
+
+:focus-visible {
+  outline: 2px solid #00707d;
+  outline-offset: 2px;
+}
+
+.app-page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px;
+
+  @media (max-width: 599px) {
+    padding: 16px;
+  }
+}
+
+.app-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.app-page-header h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.app-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 56px 16px;
+  color: #5b6770;
+  text-align: center;
+}
+
+.app-empty-state mat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  background: #e7f6f8;
+  color: #00707d;
+  margin-bottom: 4px;
+}
+
+.app-empty-state p {
+  margin: 0;
+  max-width: 320px;
+}
+
+.app-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.app-spinner-row {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.app-table-card {
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+table.mat-mdc-table {
+  width: 100%;
+}
+
+table.mat-mdc-table .mat-mdc-header-row {
+  background: #f6f8f9;
+}
+
+table.mat-mdc-table .mat-mdc-header-cell {
+  font-weight: 600;
+  color: #3a4650;
+}
+
+table.mat-mdc-table .mat-mdc-row {
+  transition: background-color 0.12s ease;
+}
+
+table.mat-mdc-table .mat-mdc-row:hover {
+  background-color: #f6fafb;
+}

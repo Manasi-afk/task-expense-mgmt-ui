@@ -1,0 +1,70 @@
+.filter-field {
+  width: 200px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.actions-cell {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.actions-cell button {
+  transition: color 0.15s ease;
+}
+
+.ai-badge {
+  font-size: 16px;
+  height: 16px;
+  width: 16px;
+  vertical-align: middle;
+  margin-left: 6px;
+  color: #e08a00;
+}
+
+::ng-deep .category-food {
+  background: #fde3c8 !important;
+  color: #8a4a05 !important;
+}
+
+::ng-deep .category-travel {
+  background: #d7e8fd !important;
+  color: #0b4a8f !important;
+}
+
+::ng-deep .category-utilities {
+  background: #e4e9eb !important;
+  color: #3a4650 !important;
+}
+
+::ng-deep .category-entertainment {
+  background: #f3d9fb !important;
+  color: #7a1fa2 !important;
+}
+
+::ng-deep .category-health {
+  background: #d9f2e6 !important;
+  color: #106647 !important;
+}
+
+::ng-deep .category-shopping {
+  background: #fde0ec !important;
+  color: #9c1361 !important;
+}
+
+::ng-deep .category-rent {
+  background: #fff6c2 !important;
+  color: #7a6300 !important;
+}
+
+::ng-deep .category-education {
+  background: #d8f0f7 !important;
+  color: #0b6b7a !important;
+}
+
+::ng-deep .category-other {
+  background: #ece7fd !important;
+  color: #4b2fa6 !important;
+}

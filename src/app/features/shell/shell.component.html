@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" class="shell-toolbar">
+  <span class="shell-brand">
+    <mat-icon>checklist</mat-icon>
+    <span class="shell-brand-text">Task &amp; Expense Manager</span>
+  </span>
+
+  <nav class="shell-nav">
+    <a routerLink="/tasks" routerLinkActive="active-link" class="shell-nav-link">Tasks</a>
+    <a routerLink="/expenses" routerLinkActive="active-link" class="shell-nav-link">Expenses</a>
+  </nav>
+
+  <span class="shell-spacer"></span>
+
+  <span class="shell-username">{{ auth.username() }}</span>
+  <button mat-icon-button (click)="logout()" aria-label="Log out" matTooltip="Log out">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

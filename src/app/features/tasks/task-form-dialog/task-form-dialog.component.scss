@@ -1,0 +1,7 @@
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: min(380px, 100%);
+  padding-top: 4px;
+}
